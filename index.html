@@ -10,7 +10,7 @@
 </head>
 
 <body class="dark:bg-neutral-300">
-    <main class="w-[60%] m-auto space-y-5 pt-8">
+    <main class="w-[90%] md:w-[60%] m-auto space-y-5 pt-8">
         <h1 class="text-center text-4xl font-semibold">RECHARGE CARD</h1>
         <div class="grid grid-cols-2 gap-10 text-gray-500">
             <div class="space-y-3">
@@ -45,34 +45,36 @@
                 </div>
 
                 <div>
-                    <button id="generate" class="p-2 rounded-lg text-white bg-blue-900">Generate</button>
-                    <button id="save" class="p-2 rounded-lg text-white bg-blue-900">Save</button>
+                    <button id="generate" class="p-2 text-xs sm:text-base rounded-lg text-white bg-blue-900">Generate</button>
+                    <button id="save" class="p-2 text-xs sm:text-base rounded-lg text-white bg-blue-900">Save</button>
                 </div>
             </div>
             <div class="space-y-3">
                 <label for="pin">Pin</label>
                 <input type="text" id="pinInput"
                     class="w-full p-2 border border-gray-50 rounded-sm focus:border-blue-300 focus:outline-2 focus:outline-blue-200">
-                <button id="rechargeButton" class="p-2 rounded-lg text-white bg-blue-900">Recharge</button>
+                <button id="rechargeButton" class="p-2 text-xs sm:text-base rounded-lg text-white bg-blue-900">Recharge</button>
             </div>
         </div>
         
-        <table class="table-auto w-full border-separate border-spacing-y-2">
-            <thead>
-                <tr>
-                    <th class="text-left px-4 py-2">S/N</th>
-                    <th class="text-left px-4 py-2">Network</th>
-                    <th class="text-left px-4 py-2">Amount</th>
-                    <th class="text-left px-4 py-2">Pin</th>
-                    <th class="text-left px-4 py-2">Recharge Code</th>
-                    <th class="text-left px-4 py-2">Status</th>
-                    <th class="text-left px-4 py-2">Date Created</th>
-                    <th class="text-left px-4 py-2">Date Used</th>
-                    <th class="text-left px-4 py-2">Action</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody"></tbody>
-        </table>
+        <div class="overflow-x-auto">
+            <table class="table-auto w-full border-separate border-spacing-y-2">
+                <thead>
+                    <tr>
+                        <th class="text-left px-2 sm:px-4 py-2">S/N</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Network</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Amount</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Pin</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Recharge Code</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Status</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Date Created</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Date Used</th>
+                        <th class="text-left px-2 sm:px-4 py-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
     </main>
 </body>
 

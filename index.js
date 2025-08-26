@@ -56,15 +56,15 @@ function displayList() {
     cardSummaryList.forEach((card, index) => {
         const tr = document.createElement("tr");
         tr.className = "bg-blue-50 shadow";
-        tr.innerHTML = `<th class="text-left px-4 py-1 rounded-l-lg">${index + 1}</th>
-            <td class="text-left px-4 py-1">${card.name}</td>
-            <td class="text-left px-4 py-1">${card.amount}</td>
-            <td class="text-left px-4 py-1">${card.pin}</td>
-            <td class="text-left px-4 py-1">${card.rechargeCode()}</td>
-            <td class="text-left px-4 py-1">${card.checkStatus}</td>
-            <td class="text-left px-4 py-1">${card.dateCreated}</td>
-            <td class="text-left px-4 py-1">${card.dateUsed}</td>
-            <td class="text-left px-4 py-1 rounded-r-lg"><button onclick="deleteCard(${index})" class="p-2 bg-red-800 text-white rounded-lg ">Delete</button></td>
+        tr.innerHTML = `<th class="text-left px-2 sm:px-4 py-1 rounded-l-lg">${index + 1}</th>
+            <td class="text-left px-2 sm:px-4 py-1">${card.name}</td>
+            <td class="text-left px-2 sm:px-4 py-1">${card.amount}</td>
+            <td class="text-left px-2 sm:px-4 py-1">${card.pin}</td>
+            <td class="text-left px-2 sm:px-4 py-1">${card.rechargeCode()}</td>
+            <td class="text-left px-2 sm:px-4 py-1">${card.checkStatus}</td>
+            <td class="text-left px-2 sm:px-4 py-1">${card.dateCreated}</td>
+            <td class="text-left px-2 sm:px-4 py-1">${card.dateUsed}</td>
+            <td class="text-left px-2 sm:px-4 py-1 rounded-r-lg"><button onclick="deleteCard(${index})" class="p-2 bg-red-800 text-white rounded-lg ">Delete</button></td>
         `;
         cardTableList.appendChild(tr);
         network.value = "";
