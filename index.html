@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <script src="index.js" defer></script>
+    <title>Recharge Card Generator</title>
+</head>
+
+<body class="dark:bg-neutral-300">
+    <main class="w-[60%] m-auto space-y-5 pt-8">
+        <h1 class="text-center text-4xl font-semibold">RECHARGE CARD</h1>
+        <div class="grid grid-cols-2 gap-10 text-gray-500">
+            <div class="space-y-3">
+                <div>
+                    <label for="network">Network</label>
+                    <select id="network"
+                        class="border w-full p-2 border-gray-50 focus:border-blue-300 rounded-sm focus:outline-2 focus:outline-blue-200">
+                        <option value="" selected disabled>Select Network</option>
+                        <option value="MTN">MTN</option>
+                        <option value="Glo">Glo</option>
+                        <option value="Airtel">Airtel</option>
+                        <option value="9Mobile">9Mobile</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="amount">Amount</label>
+                    <select id="amount"
+                        class="border w-full p-2 border-gray-50 focus:border-blue-300 rounded-sm focus:outline-2 focus:outline-blue-200">
+                        <option value="" selected disabled>Select Amount</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="recharge">Recharge</label>
+                    <input type="text" id="recharge" maxlength="0"
+                        class="w-full p-2 caret-white border border-gray-50 rounded-sm focus:border-blue-300 focus:outline-2 focus:outline-blue-200">
+                </div>
+
+                <div>
+                    <button id="generate" class="p-2 rounded-lg text-white bg-blue-900">Generate</button>
+                    <button id="save" class="p-2 rounded-lg text-white bg-blue-900">Save</button>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <label for="pin">Pin</label>
+                <input type="text" id="pinInput"
+                    class="w-full p-2 border border-gray-50 rounded-sm focus:border-blue-300 focus:outline-2 focus:outline-blue-200">
+                <button id="rechargeButton" class="p-2 rounded-lg text-white bg-blue-900">Recharge</button>
+            </div>
+        </div>
+        
+        <table class="table-auto w-full border-separate border-spacing-y-2">
+            <thead>
+                <tr>
+                    <th class="text-left px-4 py-2">S/N</th>
+                    <th class="text-left px-4 py-2">Network</th>
+                    <th class="text-left px-4 py-2">Amount</th>
+                    <th class="text-left px-4 py-2">Pin</th>
+                    <th class="text-left px-4 py-2">Recharge Code</th>
+                    <th class="text-left px-4 py-2">Status</th>
+                    <th class="text-left px-4 py-2">Date Created</th>
+                    <th class="text-left px-4 py-2">Date Used</th>
+                    <th class="text-left px-4 py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </main>
+</body>
+
+</html>
